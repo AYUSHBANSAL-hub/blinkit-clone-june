@@ -1,9 +1,9 @@
 console.log("script file started.");
-//(done)Conditionals
-//(done) Functions
-//difference between == and ===
-//(done) examples of functions
-// Making micro Js projects
+// (done) Conditionals
+// (done) Functions
+// (done) difference between == and ===
+// (done) examples of functions
+// (done) Making micro Js projects
 // 1. Magic 8 ball simulator
 // 2. (done) Random Quote generator
 // 3. (done) Password Strength checker
@@ -16,10 +16,10 @@ console.log("script file started.");
 // 10.(done) Random password generator
 // 11.(done) Digital clock
 // 12.(HW) Calculator
-//Arrays
-//Objects
+// (done) Arrays
+// (done) Objects
 
-//conditinals
+//conditionals
 
 // 1. If statement
 
@@ -314,10 +314,9 @@ let quotes = [
 // function randomQuote(){
 //     let randomQuote=Math.floor(Math.random()*quotes.length);
 //     alert(quotes[randomQuote]);
-    
+
 // }
 // randomQuote();
-
 
 // let quotes = ["abcd","hsjfd","jbdfjknsjd","sbdjsddf"]
 
@@ -333,8 +332,6 @@ let quotes = [
 //     console.log(quotes[q1]);
 // }
 // rahiye();
-
-
 
 //DIGITAL CLOCK
 
@@ -362,30 +359,33 @@ let quotes = [
 
 //creating array
 
-const numbers=[1,3,45,6,2];
+const numbers = [1, 3, 45, 6, 2];
 
-const fruits=["apple","oranges","banana"];
+const fruits = ["apple", "oranges", "banana"];
 
-const mixed=[1,"Ayush", true,{
-    name:"Ayush",
-    age:10,
-    placed:true
-}]
-
+const mixed = [
+  1,
+  "Ayush",
+  true,
+  {
+    name: "Ayush",
+    age: 10,
+    placed: true,
+  },
+];
 
 //accessing elements in array
-console.log(numbers[2])
+console.log(numbers[2]);
 
 //modifying element in array
-numbers[0]=111;
+numbers[0] = 111;
 console.log(numbers);
 
-
 //finding array length
-console.log(numbers.sort((a,b)=>a-b))
+console.log(numbers.sort((a, b) => a - b));
 
 //Array Method and operations:
-const numsArray=[1,2,3,4,5,6,7,8,9,10];
+const numsArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // push(): Adds one or more elements to the end of an array.
 // pop(): Removes the last element from an array and returns it.
@@ -394,3 +394,259 @@ const numsArray=[1,2,3,4,5,6,7,8,9,10];
 // concat(): Concatenates two or more arrays and returns a new array.
 // slice(): Extracts a portion of an array into a new array.
 // splice(): Changes the content of an array by adding, removing, or replacing elements.
+
+// DOUBT 1:
+// `some text ${value}, sometest`
+
+// sir is this used mostly or the traditional one using "+"
+
+// let firstName="Ayush";
+// let lastName="Bansal"
+// console.log("Hello, "+firstName+" "+lastName+". Nice to meet you.");
+// console.log(`Hellol, ${firstName} ${lastName}. Nice to meet you.`);
+
+document.addEventListener("click", () => {
+  console.log("button clicked!");
+});
+
+//difference between == and ===
+
+let a = 10;
+let b = "10";
+let c = 10;
+
+if (a == b) {
+  console.log(a, b);
+}
+
+if (a === b) {
+  console.log(a, b);
+} else console.log("else condition:", a, b);
+
+//Array Method and operations:
+const numsArray1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// push(): Adds one or more elements to the end of an array.
+// pop(): Removes the last element from an array and returns it.
+// shift(): Removes the first element from an array and returns it.
+// unshift(): Adds one or more elements to the beginning of an array.
+// concat(): Concatenates two or more arrays and returns a new array.
+// slice(): Extracts a portion of an array into a new array.
+// splice(): Changes the content of an array by adding, removing, or replacing elements.
+
+//push(): Adds one or more elements to the end of an array.
+
+let numlist = ["1", "2", "3"];
+numlist.push("4");
+console.log(numlist);
+
+let numlist1 = [1, 2, 3];
+numlist1.push(4, 5, 6);
+console.log(numlist1);
+
+//pop(): Removes the last element from an array and returns it.
+//  eg 1:
+let colors = ["orange", "pink", "red"];
+let lastcolor = colors.pop();
+
+console.log(lastcolor);
+console.log(colors);
+
+// eg 2.
+
+// using arrays at stack
+
+let stack = [1, 2, 3, 4, 5];
+while (stack.length > 0) {
+  console.log(stack.pop());
+}
+console.log(stack);
+
+//shift(): Removes the first element from an array and returns it.
+
+let names = ["Ayush", "Yashwardhan", "utkarsh"];
+
+let firstName = names.shift(); //ayush
+console.log(firstName);
+console.log(names);
+
+function stacktop() {
+  console.log(names[names.length - 1]);
+}
+stacktop();
+
+// unshift(): Adds one or more elements to the beginning of an array.
+
+let names1 = ["Ayush", "Yashwardhan", "utkarsh"];
+names1.unshift("Sanket");
+names1.push("shibasish");
+console.log(names1);
+
+names1.unshift("Abhishek", "Sukesh");
+console.log(names1);
+
+let names2 = ["Abhishek Kumar", "K Sukesh"];
+
+// names1.unshift(names2);
+// console.log(names1)
+
+names1.unshift(...names2);
+console.log(names1);
+
+// ... is called a spread operator used to destructure an array.
+
+let names3 = ["Ayush", 
+              "Yashwardhan", 
+              "utkarsh", 
+              ["Abhishek", "Aman"]];
+console.log(names3[3][1]);
+
+
+// concat(): Concatenates two or more arrays and returns a new array.
+
+// let names4=names1.concat(names2);
+// console.log(names4);
+// console.log(names1);
+
+
+// const nums1=[1,2,3];
+// const newArray=nums1.concat(4,[5,6]);
+// console.log(newArray);
+
+
+
+// slice(): Extracts a portion of an array into a new array.
+
+let names5 = ["Ayush", "Yashwardhan", "utkarsh","sukesh","Aman","Ananya"];
+const fewer_names=names5.slice(0,2);
+console.log(fewer_names);
+
+
+
+// splice(): Changes the content of an array by adding, removing, or replacing elements.
+let months=["Jan","Feb","Mar","April","May","June"];
+const removedMonths=months.splice(1,0,"Sept");
+console.log(removedMonths);
+console.log(months);
+// splice(index,how many values from index to be removed, what to replace it with )
+
+
+const numbers1 = [1, 2, 3, 4, 5];
+const removedItems = numbers1.splice(1, 3, 10, 11, 12);
+
+console.log(numbers1);// [1,10,11,12,5];
+console.log(removedItems);//[2,3,4]
+
+
+//Iterating over Arrays:
+
+for(let i=0;i<5;i++){
+  console.log(months[i]);
+}
+
+
+//multidimentsional arrays
+
+let matrix=[
+  [1,2,3],
+  [4,[5,5],6],
+  [7,8,9]
+]
+console.log(matrix[1][1])
+
+
+let mathops=[
+  function add(a,b){
+    return a+b;
+  },
+  function prod(a,b){
+    return a*b;
+  }
+]
+
+console.log(mathops[0](2,4));
+
+
+//Objects
+
+// objects in js are key-value pairs used to store and organize data. They are fundamental
+// ds in js and provide a flexible way to represent real world data.
+
+// 1. Creating Object
+const person={
+  name:"Ayush",
+  age:10,
+  occupation:"developer",
+  placed: true
+}
+
+console.log(person);
+
+
+// 2. Displaying Object
+// console.log(person.name);
+// console.log(person["na me"])
+
+
+
+// 3. Modifying object
+person.age=19;
+console.log(person);
+
+
+
+// 4. Adding a key in object
+
+person.city="delhi";
+console.log(person);
+
+// 5. removing a key
+
+delete person.city;
+console.log(person);
+
+//6. Object methods
+
+const calculator_with_object={
+  add: function(a,b){
+    return a+b;
+  },
+  prod: function(a,b){
+    return a*b;
+  },
+  name:"Ayush"
+}
+
+console.log(calculator_with_object.add(3,5))
+console.log(calculator_with_object.prod(3,5))
+
+
+
+// 7. Iteration over object keys
+
+for(let a in person){
+  console.log(a +" : " + person[a]);
+}
+
+// 8. Object cloning
+
+const clonedPerson= Object.assign({},person);
+console.log(clonedPerson)
+
+
+// console.log(...person);
+
+const rectangle = {
+  width: 10,
+  height: 5,
+  calculateArea: function() {
+    return this.width * this.height;
+  }
+};
+
+const movie = {
+  title: "Inception",
+  director: "Christopher Nolan",
+  releaseYear: 2010,
+  genres: ["Action", "Sci-Fi", "Thriller"]
+};
